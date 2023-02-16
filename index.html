@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>JavaScript Crud</title>
+</head>
+
+<body class="body-1">
+
+    <div class="container mt-5">
+        <div class="text-center">
+            <h1 class="display-5 mb-3">CRUD Operation</h1>
+        </div>
+        <div class="main row justify-content-cnter w-100">
+            <form class="row justify-content-center g-3 w-100" id="student-form" action="" method="get">
+                <div class="col-md-6">
+                    <label for="inputName" class="form-label">Name:</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Enter name here..." required>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="inputEmail" class="form-label">Email:</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter Email here..." required>
+                </div>
+                <div class="col-12 mb-3">
+                    <label for="inputAddress" class="form-label">Address:</label>
+                    <input type="text" class="form-control" id="inputAddress" placeholder="Enter Address here..." required>
+                </div>
+                <div class="col-sm-5 mb-3">
+                    <label for="inputCity" class="form-label">City:</label>
+                    <input type="text" class="form-control" id="inputCity" placeholder="Enter City here..." required>
+                </div>
+                <div class="col-sm-5 mb-3">
+                    <label for="inputState" class="form-label">State:</label>
+                    <input type="text" class="form-control" id="inputState" placeholder="Enter State here..." required>
+                </div>
+                <div class="col-sm-6">
+                    <label for="inputPhone" class="form-label">Phone no.:</label>
+                    <input type="tel" class="form-control" id="inputPhone" name="inputPhone"  pattern="[0-9]{10}" placeholder="Enter Phone no. here...">
+                </div>
+                <div id="phone-valid" class="invalid-feedback">
+                </div>
+                <div class="col-sm-6 p-0 mt-3">
+                    <label for="inputLang" class="form-label">Language:</label>
+                    <select id="inputLang" class="form-select">
+                        <option selected>HTML</option>
+                        <option>CSS</option>
+                        <option>JS</option>
+                        <option>JAVA</option>
+                    </select>
+                </div>
+                <fieldset class="row">
+                    <legend class="col-form-label col-sm-2 pt-0 mt-3">Gender:</legend>
+                    <div class="col-sm-2 mt-3">
+                        <div class="form-check col-sm-2">
+                            <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" required>
+                            <label class="form-check-label" for="gender">
+                                Male
+                            </label>
+                        </div>
+                        <div class="form-check col-sm-2 mt-3">
+                            <input class="form-check-input" type="radio" name="gender" id="gender" value="Female" required>
+                            <label class="form-check-label" for="gender">
+                                Female
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-sm-2 mt-3">
+                        <label for="inputDate" class="form-label">Date of Birth:</label>
+                        <input type="date" class="form-control" id="inputDate">
+                    </div>
+                </fieldset>
+
+                <div class="col-12 mt-3">
+                    <input type="submit" value="Submit" class="btn btn-success add-btn mt-3" id="Submit" onclick="AddData()">
+                    <input type="submit" value="Update" class="btn btn-primary add-btn mt-3" id="Update">
+                </div>
+            </form>
+            <div class="col-12 mt-5 justify-content-center">
+                <table class="table table-bordered table-secondary border-secondary table-striped w-100" id="crudTable">
+                    <thead>
+                        <tr>
+                            <th class="text-center">Name</th>
+                            <th class="text-center">Email</th>
+                            <th class="text-center">Address</th>
+                            <th class="text-center">City</th>
+                            <th class="text-center">State</th>
+                            <th class="text-center">Phone no.</th>
+                            <th class="text-center">Language</th>
+                            <th class="text-center">Gender</th>
+                            <th class="text-center">DOB</th>
+                            <th colspan="2" class="text-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="script.js"></script> -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>

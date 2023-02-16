@@ -1,0 +1,12 @@
+.body-1{
+    color: white;
+    background-color: #1d2630;
+}
+
+text, radio, date{
+    background-color: rgba(119, 136, 153, 0.528);
+}
+
+#Update{
+    display: none;
+}
